@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Electronic Diagnostics",
+    "description": "Full OBD-II and manufacturer-level fault code scanning for all vehicle makes and models. Pinpoint the problem before spending a cent.",
+    "icon": "diagnostic"
+  },
+  {
+    "title": "Auto Electrical Repairs",
+    "description": "Complete electrical system repairs — wiring harnesses, fuse boxes, shorts, and circuit troubleshooting.",
+    "icon": "electrical"
+  },
+  {
+    "title": "Starters & Alternators",
+    "description": "Repair and replacement of starter motors and alternators. Quick turnaround to get you back on the road.",
+    "icon": "starter"
+  },
+  {
+    "title": "Rewiring",
+    "description": "Full or partial vehicle rewiring for damaged, corroded, or faulty wiring looms. Factory-standard workmanship.",
+    "icon": "rewiring"
+  },
+  {
+    "title": "Car Servicing",
+    "description": "Scheduled maintenance services — oil changes, filter replacements, fluid top-ups, and general inspections.",
+    "icon": "service"
+  },
+  {
+    "title": "Aircon Re-Gas",
+    "description": "Air conditioning re-gas, leak detection, and compressor diagnostics. Stay cool in the Pretoria heat.",
+    "icon": "aircon"
+  },
+  {
+    "title": "Breakdown Assistance",
+    "description": "Emergency field service for breakdowns. We come to you — home, office, or roadside in the greater Pretoria area.",
+    "icon": "breakdown"
+  },
+  {
+    "title": "Battery Testing & Replacement",
+    "description": "Load testing, terminal cleaning, and battery replacement. We stock popular sizes for same-day fitting.",
+    "icon": "battery"
+  }
+]

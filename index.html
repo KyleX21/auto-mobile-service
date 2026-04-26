@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Mobile Service | Electronic Diagnostics & Car Repair | Garsfontein, Pretoria</title>
+  <meta name="description" content="Auto Mobile Service — over 30 years of trusted auto electrical diagnostics, car servicing, aircon re-gas, and breakdown repair in Garsfontein, Pretoria. Any make, any model. Call 082 894 3559.">
+  <meta name="keywords" content="auto electrician Garsfontein, car diagnostic Pretoria, car service Garsfontein, mobile mechanic Pretoria, auto electrical repairs, aircon regas Pretoria, car breakdown Garsfontein, alternator repair, starter motor repair, electronic car diagnostics, mechanic near me Pretoria East">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="ZA-GT">
+  <meta name="geo.placename" content="Garsfontein, Pretoria">
+  <meta name="geo.position" content="-25.7868;28.3100">
+  <meta name="ICBM" content="-25.7868, 28.3100">
+  <link rel="canonical" href="https://automobileservice.co.za">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Auto Mobile Service | Garsfontein, Pretoria">
+  <meta property="og:description" content="Trusted electronic diagnostics & auto electrical repairs for over 30 years. Any make, any model. Garsfontein, Pretoria.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+
+  <!-- Structured Data for Local Business SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Auto Mobile Service",
+    "description": "Electronic diagnostics, auto electrical repairs, car servicing, aircon re-gas, and breakdown assistance in Garsfontein, Pretoria. Over 30 years experience.",
+    "url": "https://automobileservice.co.za",
+    "telephone": "+27828943559",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "532 Borzoi Street",
+      "addressLocality": "Garsfontein",
+      "addressRegion": "Gauteng",
+      "postalCode": "0042",
+      "addressCountry": "ZA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -25.7868,
+      "longitude": 28.3100
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:30",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Thomas Dreyer"
+    },
+    "areaServed": [
+      "Garsfontein", "Pretoria East", "Pretoria", "Moreleta Park", "Waterkloof", "Faerie Glen", "Lynnwood", "Menlo Park", "Ashlea Gardens"
+    ],
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "320"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="fetch" href="./services.json" crossorigin="anonymous">
+
+  <style>
+    /* ============================================
+       AMS DESIGN TOKENS
+       Brand extracted from business card:
+       Navy blue banner + red accents + white
+       ============================================ */
+    :root {
+      /* Brand Primary — from the blue banner on business card */
+      --ams-navy: #102B6A;
+      --ams-navy-deep: #0A1D4A;
+      --ams-navy-light: #1A3D8F;
+      
+      /* Brand Accent — from the red phone number */
+      --ams-red: #CC2029;
+      --ams-red-dark: #A8171F;
+      --ams-red-light: #E8333C;
+      
+      /* Surfaces */
+      --ams-white: #FFFFFF;
+      --ams-off-white: #F5F6FA;
+      --ams-grey-100: #E8EAF0;
+      --ams-grey-200: #D0D3DC;
+      --ams-grey-400: #8A8F9E;
+      --ams-grey-600: #4A4F5E;
+      --ams-grey-800: #2A2E3A;
+      --ams-text: #1A1E2A;
+      
+      /* Functional */
+      --ams-success: #1B8A4E;
+      --ams-warning: #D4920A;
+      
+      /* Typography */
+      --font-display: 'Barlow Condensed', 'Impact', sans-serif;
+      --font-body: 'Barlow', 'Helvetica Neue', sans-serif;
+      
+      /* Spacing (4px grid) */
+      --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px;
+      --sp-5: 20px; --sp-6: 24px; --sp-8: 32px; --sp-10: 40px;
+      --sp-12: 48px; --sp-16: 64px; --sp-20: 80px; --sp-24: 96px;
+      
+      /* Radius */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      
+      /* Shadows */
+      --shadow-card: 0 2px 12px rgba(16, 43, 106, 0.08);
+      --shadow-card-hover: 0 8px 32px rgba(16, 43, 106, 0.14);
+      --shadow-nav: 0 2px 16px rgba(16, 43, 106, 0.10);
+      
+      /* Transitions */
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --duration: 0.35s;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      scroll-padding-top: 80px;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      color: var(--ams-text);
+      background: var(--ams-white);
+      line-height: 1.6;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; font-family: inherit; }
+
+    /* ============================================
+       UTILITY
+       ============================================ */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--sp-6);
+    }
+
+    .section-label {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ams-red);
+      margin-bottom: var(--sp-3);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      color: var(--ams-navy);
+      margin-bottom: var(--sp-4);
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--ams-grey-600);
+      max-width: 560px;
+      line-height: 1.65;
+    }
+
+    /* ============================================
+       NAVIGATION
+       ============================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--ams-white);
+      transition: box-shadow var(--duration) var(--ease-out);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+    }
+
+    /* The blue banner logo mark — matches business card header */
+    .nav-logo-mark {
+      background: var(--ams-navy);
+      color: var(--ams-white);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .nav-logo-text span:first-child {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--ams-navy);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .nav-logo-text span:last-child {
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--ams-grey-400);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-8);
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      color: var(--ams-grey-600);
+      transition: color var(--duration) var(--ease-out);
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover { color: var(--ams-navy); }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: var(--ams-red);
+      color: var(--ams-white) !important;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      transition: background var(--duration) var(--ease-out), transform 0.15s;
+    }
+
+    .nav-cta:hover {
+      background: var(--ams-red-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      padding: var(--sp-2);
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--ams-navy);
+      border-radius: 2px;
+      transition: all 0.3s var(--ease-out);
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .hero {
+      position: relative;
+      padding: 140px 0 var(--sp-20);
+      background: linear-gradient(170deg, var(--ams-off-white) 0%, var(--ams-white) 60%);
+      overflow: hidden;
+    }
+
+    /* Diagonal stripe accent — echoes the blue banner from the card */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--ams-navy) 0%, var(--ams-navy) 70%, var(--ams-red) 70%, var(--ams-red) 100%);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-16);
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: var(--ams-navy);
+      color: var(--ams-white);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      margin-bottom: var(--sp-6);
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--ams-red);
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      line-height: 1.05;
+      color: var(--ams-navy);
+      margin-bottom: var(--sp-5);
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--ams-red);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--ams-grey-600);
+      line-height: 1.7;
+      margin-bottom: var(--sp-8);
+      max-width: 480px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--sp-4);
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      transition: all var(--duration) var(--ease-out);
+      letter-spacing: 0.3px;
+    }
+
+    .btn-primary {
+      background: var(--ams-red);
+      color: var(--ams-white);
+    }
+    .btn-primary:hover {
+      background: var(--ams-red-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(204, 32, 41, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--ams-navy);
+      color: var(--ams-white);
+    }
+    .btn-secondary:hover {
+      background: var(--ams-navy-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 43, 106, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ams-navy);
+      border: 2px solid var(--ams-grey-200);
+    }
+    .btn-outline:hover {
+      border-color: var(--ams-navy);
+      background: var(--ams-navy);
+      color: var(--ams-white);
+    }
+
+    /* Hero visual — the "engine bay" graphic zone */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: var(--ams-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card-hover);
+      padding: var(--sp-10);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--ams-navy), var(--ams-red));
+    }
+
+    .hero-stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-6);
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-number {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 2.6rem;
+      color: var(--ams-navy);
+      line-height: 1;
+    }
+
+    .hero-stat-number.accent { color: var(--ams-red); }
+
+    .hero-stat-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ams-grey-400);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: var(--sp-1);
+    }
+
+    .hero-stat-divider {
+      grid-column: 1 / -1;
+      height: 1px;
+      background: var(--ams-grey-100);
+    }
+
+    /* ============================================
+       TRUST BAR
+       ============================================ */
+    .trust-bar {
+      background: var(--ams-navy-deep);
+      padding: var(--sp-5) 0;
+    }
+
+    .trust-bar-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--sp-10);
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+      font-size: 0.88rem;
+    }
+
+    .trust-item svg {
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    .trust-item strong {
+      color: var(--ams-white);
+      font-weight: 700;
+    }
+
+    /* ============================================
+       SERVICES
+       ============================================ */
+    .services {
+      padding: var(--sp-24) 0;
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: var(--sp-16);
+    }
+
+    .services-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    /* 
+       SERVICE CATALOG — JSON-driven for easy editing.
+       Each card pulls from the services array in JS below.
+       To add/remove/edit services, just edit that array.
+    */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--sp-6);
+    }
+
+    .service-card {
+      background: var(--ams-white);
+      border: 1px solid var(--ams-grey-100);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-8);
+      transition: all var(--duration) var(--ease-out);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: var(--ams-red);
+      transition: height var(--duration) var(--ease-out);
+    }
+
+    .service-card:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow-card-hover);
+      transform: translateY(-4px);
+    }
+
+    .service-card:hover::before {
+      height: 100%;
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--ams-off-white);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--sp-5);
+      transition: background var(--duration) var(--ease-out);
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--ams-navy);
+    }
+
+    .service-card:hover .service-icon svg {
+      color: var(--ams-white);
+    }
+
+    .service-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--ams-navy);
+      transition: color var(--duration) var(--ease-out);
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--ams-navy);
+      margin-bottom: var(--sp-2);
+      letter-spacing: 0.3px;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--ams-grey-600);
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       WHY AMS
+       ============================================ */
+    .why {
+      padding: var(--sp-24) 0;
+      background: var(--ams-off-white);
+      position: relative;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-16);
+      align-items: center;
+    }
+
+    .why-content { max-width: 520px; }
+
+    .why-content .section-title {
+      margin-bottom: var(--sp-6);
+    }
+
+    .why-text {
+      font-size: 1rem;
+      color: var(--ams-grey-600);
+      line-height: 1.75;
+      margin-bottom: var(--sp-8);
+    }
+
+    .why-features {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-5);
+    }
+
+    .why-feature {
+      display: flex;
+      gap: var(--sp-4);
+      align-items: flex-start;
+    }
+
+    .why-feature-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--ams-navy);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .why-feature-icon svg {
+      width: 18px;
+      height: 18px;
+      color: var(--ams-white);
+    }
+
+    .why-feature-text h4 {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--ams-navy);
+      margin-bottom: 2px;
+    }
+
+    .why-feature-text p {
+      font-size: 0.85rem;
+      color: var(--ams-grey-400);
+      line-height: 1.55;
+    }
+
+    /* Testimonial card cluster on the right */
+    .why-visuals {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-5);
+    }
+
+    .testimonial-card {
+      background: var(--ams-white);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-6) var(--sp-8);
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      font-family: var(--font-display);
+      font-size: 4rem;
+      color: var(--ams-red);
+      opacity: 0.15;
+      line-height: 1;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: var(--sp-3);
+    }
+
+    .testimonial-stars svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--ams-warning);
+    }
+
+    .testimonial-text {
+      font-size: 0.92rem;
+      color: var(--ams-grey-600);
+      line-height: 1.65;
+      margin-bottom: var(--sp-3);
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--ams-navy);
+    }
+
+    .testimonial-meta {
+      font-size: 0.75rem;
+      color: var(--ams-grey-400);
+    }
+
+    /* ============================================
+       CONTACT / CTA
+       ============================================ */
+    .contact {
+      padding: var(--sp-24) 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-12);
+      align-items: start;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-8);
+    }
+
+    .contact-card {
+      display: flex;
+      gap: var(--sp-4);
+      align-items: flex-start;
+    }
+
+    .contact-card-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--ams-off-white);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-card-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--ams-navy);
+    }
+
+    .contact-card h4 {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--ams-navy);
+      margin-bottom: 2px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      font-size: 0.9rem;
+      color: var(--ams-grey-600);
+      line-height: 1.55;
+    }
+
+    .contact-card a:hover { color: var(--ams-red); }
+
+    .contact-phone-big {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: var(--ams-red);
+      letter-spacing: 1px;
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: var(--sp-4);
+      flex-wrap: wrap;
+      margin-top: var(--sp-4);
+    }
+
+    /* Map container */
+    .contact-map {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      height: 380px;
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      background: var(--ams-navy-deep);
+      padding: var(--sp-12) 0 var(--sp-6);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-6);
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+    }
+
+    .footer-logo-mark {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--ams-white);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      line-height: 1.2;
+    }
+
+    .footer-text {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.82rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: var(--sp-6);
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: color var(--duration);
+    }
+
+    .footer-links a:hover { color: var(--ams-white); }
+
+    /* ============================================
+       SCROLL REVEAL
+       ============================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: var(--sp-10);
+      }
+
+      .hero-visual { order: -1; }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-10);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links { 
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--ams-white);
+        flex-direction: column;
+        padding: var(--sp-6);
+        gap: var(--sp-4);
+        box-shadow: var(--shadow-nav);
+      }
+
+      .nav.nav-open .nav-links { display: flex; }
+      .nav-toggle { display: flex; }
+
+      .nav.nav-open .nav-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .nav.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+      .nav.nav-open .nav-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+
+      .hero { padding: 110px 0 var(--sp-12); }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-bar-inner { gap: var(--sp-6); }
+
+      .hero-stat-grid { gap: var(--sp-4); }
+
+      .hero-stat-number { font-size: 2rem; }
+
+      .contact-phone-big { font-size: 1.4rem; }
+    }
+
+    /* ============================================
+       WHATSAPP FLOATING BTN
+       ============================================ */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+    }
+
+    .wa-float svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-brand">
+        <div class="nav-logo">
+          <div class="nav-logo-mark">AMS</div>
+          <div class="nav-logo-text">
+            <span>Auto Mobile Service</span>
+            <span>Electronic Diagnostics & Repair</span>
+          </div>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="tel:0828943559" class="nav-cta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            082 894 3559
+          </a>
+        </li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">Garsfontein, Pretoria East</div>
+        <h1>Electronic Diagnostics<br>& <em>Car Service</em></h1>
+        <p class="hero-sub">Field service to all electrical faults, rewiring, breakdowns, starters, alternators, aircon re-gas, and general auto electrical repairs. <strong>Any make. Any model. Any year.</strong></p>
+        <div class="hero-actions">
+          <a href="tel:0828943559" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now
+          </a>
+          <a href="https://wa.me/27828943559?text=Hi%20Thomas%2C%20I'd%20like%20to%20book%20a%20service%20please." class="btn btn-secondary" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-stat-grid">
+            <div class="hero-stat">
+              <div class="hero-stat-number">30+</div>
+              <div class="hero-stat-label">Years Experience</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number accent">5000+</div>
+              <div class="hero-stat-label">Cars Serviced</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <div class="hero-stat-number">4.9</div>
+              <div class="hero-stat-label">Client Rating</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number accent">All</div>
+              <div class="hero-stat-label">Makes & Models</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <div class="trust-bar">
+    <div class="container trust-bar-inner">
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span><strong>Trusted</strong> since 1994</span>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <span><strong>Certified</strong> diagnostics</span>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+        <span><strong>Mobile</strong> field service</span>
+      </div>
+      <div class="trust-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+        <span><strong>Affordable</strong> rates</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">From full electronic diagnostics to aircon re-gas — everything your car needs under one roof. No job too big or small.</p>
+      </div>
+      <div class="services-grid" id="servicesGrid">
+        <!-- Rendered by JS from editable service catalog -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY AMS ============ -->
+  <section class="why" id="about">
+    <div class="container why-grid">
+      <div class="why-content reveal">
+        <div class="section-label">Why Choose Us</div>
+        <h2 class="section-title">30+ Years of Keeping<br>Pretoria Moving</h2>
+        <p class="why-text">Thomas Dreyer founded Auto Mobile Service over three decades ago with one mission: honest, affordable car repairs — done right the first time. Based in Garsfontein, we've built a loyal client base across Pretoria East through reliability, expertise, and fair pricing. No shortcuts, no surprises.</p>
+        
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+            </div>
+            <div class="why-feature-text">
+              <h4>Any Make, Any Model</h4>
+              <p>We diagnose and repair all vehicle brands — from everyday runarounds to German engineering.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="why-feature-text">
+              <h4>Honest & Transparent</h4>
+              <p>We tell you exactly what's wrong and what it'll cost — before we start any work.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="why-feature-text">
+              <h4>Fast Turnaround</h4>
+              <p>Most diagnostics and repairs completed same-day. We respect your time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-visuals reveal">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"Thomas has been servicing our family cars for over 15 years. Reliable, honest, and always fair. Would never go anywhere else."</p>
+          <div class="testimonial-author">Johan van der Merwe</div>
+          <div class="testimonial-meta">Loyal client since 2009</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"My car wouldn't start on a Monday morning. Thomas came out within the hour and got me back on the road. Excellent service."</p>
+          <div class="testimonial-author">Samantha Naidoo</div>
+          <div class="testimonial-meta">Garsfontein resident</div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="testimonial-text">"Best diagnostic equipment I've seen at a small operation. Found the issue other mechanics missed in minutes. Saved me thousands."</p>
+          <div class="testimonial-author">Pieter Botha</div>
+          <div class="testimonial-meta">Referred by a friend</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="services-header reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Book Your Appointment</h2>
+        <p class="section-subtitle">Phone or WhatsApp us to schedule a diagnostic or service. Walk-ins welcome, but booking guarantees your spot.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:0828943559" class="contact-phone-big">082 894 3559</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>532 Borzoi Street<br>Garsfontein, Pretoria<br>Gauteng, 0042</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <h4>Hours</h4>
+              <p>Mon – Fri: 07:30 – 17:00<br>Saturday: 08:00 – 13:00<br>Sunday: Closed</p>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a href="tel:0828943559" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Now
+            </a>
+            <a href="https://wa.me/27828943559?text=Hi%20Thomas%2C%20I'd%20like%20to%20book%20a%20service%20please." class="btn btn-secondary" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-map reveal">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.5!2d28.31!3d-25.7868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQ3JzEyLjUiUyAyOMKwMTgnMzYuMCJF!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" 
+            allowfullscreen 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Auto Mobile Service location in Garsfontein, Pretoria">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo-mark">AMS</div>
+        <span class="footer-text">&copy; 2026 Auto Mobile Service. All rights reserved.</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOAT ============ -->
+  <a href="https://wa.me/27828943559?text=Hi%20Thomas%2C%20I'd%20like%20to%20book%20a%20service%20please." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ============ JAVASCRIPT ============ -->
+  <script>
+    /* =============================================
+       SERVICE CATALOG
+       =============================================
+       To add, remove, or edit services, edit
+       services.json (next to this HTML file). Each
+       object in the array is one card. The website
+       picks it up on the next page load.
+       ============================================= */
+
+    /* SVG icons for each service type */
+    const ICONS = {
+      diagnostic: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.34 19a10 10 0 1 1 17.32 0"/><path d="m12 14 4-4"/><circle cx="12" cy="14" r="1.2" fill="currentColor" stroke="none"/></svg>',
+      electrical: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
+      starter: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3"/></svg>',
+      rewiring: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v2"/><path d="M19 15V6.5a3.5 3.5 0 0 0-7 0v11a3.5 3.5 0 0 1-7 0V9"/><path d="M21 21v-2h-4"/><path d="M3 5h4V3"/><path d="M7 5a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1V3"/></svg>',
+      service: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+      aircon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M12 2v20"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg>',
+      breakdown: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V8a1 1 0 0 1 1-1h5v9"/><path d="M8 11l13 4v1H8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="17" cy="18.5" r="2.5"/></svg>',
+      battery: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M7 7V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2"/><path d="M13 7V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2"/><path d="M9 14h6"/><path d="M12 11v6"/></svg>'
+    };
+
+    /* =============================================
+       SCROLL REVEAL
+       ============================================= */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* Load services.json and render the grid */
+    async function loadAndRenderServices() {
+      const grid = document.getElementById('servicesGrid');
+      let catalog;
+      try {
+        const res = await fetch('./services.json', { cache: 'force-cache' });
+        if (!res.ok) throw new Error(res.statusText);
+        catalog = await res.json();
+      } catch (err) {
+        console.error('Failed to load services.json', err);
+        grid.closest('.services')?.setAttribute('hidden', '');
+        return;
+      }
+      grid.innerHTML = catalog.map((svc, i) => `
+        <div class="service-card reveal" style="transition-delay: ${i * 0.06}s">
+          <div class="service-icon">${ICONS[svc.icon] || ICONS.service}</div>
+          <h3>${svc.title}</h3>
+          <p>${svc.description}</p>
+        </div>
+      `).join('');
+      grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+    loadAndRenderServices();
+
+    /* =============================================
+       NAV SCROLL SHADOW & MOBILE TOGGLE
+       ============================================= */
+    const nav = document.getElementById('nav');
+    const navToggle = document.getElementById('navToggle');
+
+    window.addEventListener('scroll', () => {
+      nav.style.boxShadow = window.scrollY > 20 ? 'var(--shadow-nav)' : 'none';
+    });
+
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => nav.classList.remove('nav-open'));
+    });
+  </script>
+</body>
+</html>
