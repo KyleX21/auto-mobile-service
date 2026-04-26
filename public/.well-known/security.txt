@@ -1,0 +1,5 @@
+Contact: tel:+27828943559
+Contact: https://wa.me/27828943559
+Expires: 2027-04-26T00:00:00Z
+Preferred-Languages: en, af
+Canonical: https://automobileservices.co.za/.well-known/security.txt
