@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://automobileservices.co.za/sitemap.xml
+Sitemap: https://www.automobileservices.co.za/sitemap.xml
